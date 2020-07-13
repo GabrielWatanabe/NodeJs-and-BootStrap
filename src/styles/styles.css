@@ -1,0 +1,355 @@
+body {
+    font-family: Arial;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  .page-header {
+      margin: 20px 0 20px !important;
+  }
+  #modelo {
+      font-size: 22px;
+      color: darkslateblue;
+  }
+
+  #detalhesVeiculo {
+      height: 40px;
+  }
+  
+  .marcaAno {
+      display: flex; 
+      /* justify-content: flex-start; */
+      height: 34px;
+      flex-direction: column;
+      width: 50%;
+      margin-bottom: 45px;
+  }
+
+  #listVeiculo-table {
+      margin-top: 30px;
+  }
+
+  #mainList {
+      height: auto;
+      border: 1px solid grey;
+      display: flex;
+      background-color: rgb(204, 204, 204);
+      justify-content: space-between;
+      margin-top: 15px
+
+  }
+
+  #comentario {
+     width: 100%;
+     font-weight: normal;
+     font-size: 17px;
+  }
+
+  #divComentario {
+      height: 61%;
+      word-wrap: break-word;
+  }
+
+  #listVeiculo {
+     width: 100%;
+     background-color: white;
+     padding: 10px;
+     margin: 10px;
+     height: 505px;
+     border: 1px solid grey;
+     box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.77);
+     border-radius: 5px;
+
+  }
+
+  .widthInput {
+      width: 250px;
+  }
+
+  .labelVeiculo {
+      color: gray;
+      font-size: 11px;
+      font-weight: 500;
+  }
+
+  #buttonEdit {
+      float: right;
+      width: 130px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+  }
+
+  #searchVeiculos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 45px;
+}
+  }
+
+  .alignComponents {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  #listDetails {
+    height: 560px;
+     width: 43%;
+     background-color: white;
+     padding: 10px;
+     margin: 10px;
+     border: 1px solid grey;
+     box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.77);
+     border-radius: 5px;
+
+  }
+
+  .alignDivsVeiculoMarcaAno {
+      display: flex;
+  }
+
+  #listVeiculo-table {
+      width: 100%;
+  }
+
+  .buttonSave {
+      margin-top: 13px;
+  }
+
+  .labelListVeiculo {
+      position: absolute;
+      margin: 23px;
+      font-weight: bold
+  }
+
+  .modal-details {
+      text-align: right;
+      border-top: 1px solid #e5e5e5;
+  }
+
+  form.example {
+      display: flex;
+      align-items: center;
+  }
+
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 90%;
+    background: #f1f1f1;
+    margin-left: 15px;
+    border-radius: 5px;
+  }
+  
+  form.example .add{
+    float: left;
+    width: 3%;
+    padding: 10px;
+    background: rgb(0, 66, 121);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+
+  form.example .search{
+    float: left;
+    width: 3%;
+    padding: 10px;
+    background: grey;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #00213b;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 6px 0;
+      padding: 0;
+  }
+  .btn-success {
+      background-color: rgb(0, 66, 121) ;
+  }
+  
+  .btn-success:hover {
+      background-color: rgb(3, 54, 97) ;
+  }
+  
+  .btn-success:focus {
+      background-color: rgb(3, 54, 97) ;
+  }
+  .modal .modal-dialog {
+  max-width: 600px;
+  /* max-height: 500px; */
+}
+.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+  padding: 20px 30px;
+}
+.modal .modal-content {
+  border-radius: 3px;
+  font-size: 14px;
+}
+.modal .modal-footer {
+  background: #ecf0f1;
+  border-radius: 0 0 3px 3px;
+}
+.modal .modal-title {
+  display: inline-block;
+}
+.modal .form-control {
+  border-radius: 2px;
+  box-shadow: none;
+  border-color: #dddddd;
+}
+.modal textarea.form-control {
+  resize: vertical;
+}
+.modal .btn {
+  border-radius: 2px;
+  min-width: 100px;
+}	
+.modal form label {
+  font-weight: normal;
+}	
+
+.navbar {
+  margin-bottom: 0 !important;
+}
+
+.smallerTable {
+  height: 160px !important;
+}
+
+.wrapperTable {
+  width: 100%;
+  height: 290px;
+  background: whitesmoke;
+  margin-top: 15px;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+}
+
+  .wrapperTable table {
+      border-collapse: collapse; 
+       width: 100% !important;
+       font-size: 13px !important; 
+       border-bottom: none; 
+       border-color: gray
+  }
+
+      .wrapperTable table th {
+          height: 25px !important;
+          padding: 0;
+          text-align: center;
+          font-weight: bold;
+          border-radius: 5px;
+          background-image: linear-gradient(to bottom, rgba(255,255,255,.1), rgba(255,255,255,.4), rgba(255,255,255,0), rgba(255,255,255,.4));
+      }
+
+      .wrapperTable table td {
+          border-left: 1px solid rgba(206, 210, 214, 1);
+      }
+
+          .wrapperTable table td:first-child {
+              border-left: none;
+          }
+
+  .wrapperTable tr {
+      cursor: pointer;
+  }
+
+      .wrapperTable tr:nth-child(odd) {
+          background-color: #eee !important;
+      }
+
+      .wrapperTable tr:nth-child(even) {
+          background-color: #fff !important;
+      }
+
+  .wrapperTable table tbody tr td {
+      height: 27px;
+      text-align: center;
+      padding: 0;
+  }
+
+  .tmx-modal-mobile-close {
+  display: none;
+}
+
+.paging-nav {
+  text-align: right;
+  padding-top: 2px;
+}
+
+  .paging-nav a {
+      margin: auto 1px;
+      text-decoration: none;
+      padding: 1px 7px;
+      background: #D4D4D4;
+      color: white;
+      border-radius: 3px;
+  }
+
+  .paging-nav .selected-page {
+      background: #7b776f;
+      font-weight: bold;
+  }
+
+  .divPaginate {
+    min-height: 30px;
+    width: 100%;
+    background: whitesmoke;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: solid 1px #aaa;
+    overflow: auto;
+    padding: 10px;
+    margin: 0px 10px 10px 10px;
+}
+
+#veiculoPagination {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+
+}
+
+#imgCheck {
+  filter: opacity(0.5);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#statusVeiculo {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+#divCheck {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}

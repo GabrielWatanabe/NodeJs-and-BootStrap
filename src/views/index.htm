@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>OnCar</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel='stylesheet' href='/styles/styles.css' type="text/css">
+ <script src="/javascript/index.js" type="text/javascript"></script>
+ <script src="/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+ <script src="/jquery/jquery.maskedinput.min.js" type="text/javascript"></script>
+ <script src="/jquery/jquery-1.11.1.ui.min.js" type="text/javascript"></script>
+ <script src="/jquery/jquery.dataTables.min.js" type="text/javascript"></script>
+ <script src="/jquery/jquery-ui-sliderAccess.js" type="text/javascript"></script>
+ <script src="/jquery/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
+ <script src="/jquery/paging.js" type="text/javascript"></script>
+<body> 
+    <nav class="navbar ">
+        <div id="main" class="container-fluid">
+            <h3 class="page-header" style="color: darkslateblue;">Teste</h3>
+        </div>
+        <form class="example" >
+            <input id="valueSearch" type="text" placeholder="Buscar Veículo" name="search">
+               <a id="searchVeiculos" class="search" type="submit"><i class="fa fa-search" data-toggle="tooltip"></i></a>
+               <a class="add btn btn-success" id="addModalNew" href="#addNew" data-toggle="modal">
+               <i class="fa fa-plus" data-toggle="tooltip"></i>
+               </a>
+            </input>
+        </form>
+        <div id="mainList">
+            <label class="labelListVeiculo">Lista de veículos</label>
+            <div id="veiculoPagination">
+                <div id="listVeiculo">
+                </div>
+            </div>
+            <div id="listDetails">
+                <label style="font-weight: bold;">Detalhes do veículo</label>
+                <hr/>
+                <div id="detalhesVeiculo">
+                   <label id="modelo"></label>
+                </div>
+                <div class="alignDivsVeiculoMarcaAno">
+                    <div class="marcaAno">
+                        <label class="labelVeiculo">Marca</label>
+                        <label id="marca"></label>
+                    </div>
+                    <div style="font-size: 18px;" class="marcaAno">
+                        <label class="labelVeiculo">Ano</label>
+                        <label id="anoVeiculo"></label>
+                    </div>
+                </div>
+                <div id="divComentario">
+                    <label id="comentario"></label>
+                </div>
+                
+                <hr/>
+                <a class="btn btn-success" onclick="insertValues()" id="buttonEdit" href="#editVeiculo" data-toggle="modal">EDITAR
+                </a>
+            </div>
+        </div>
+        <!--Add new veiculo-->
+        <div id="addNew" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        </hr>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="">Modelo</label>
+                                <input id="infoModelo" class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                               <label for="">Marca</label>
+                               <input id="infoMarca" class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                               <label for="">Ano</label>
+                               <input id="infoAno" class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                               <label for="">Descrição</label>
+                               <textarea id="infoDescricao" class="form-control" class="form-control" required></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+					        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					        <input id="addVeiculo" type="submit" class="btn btn-success" value="Adicionar">
+				        </div>
+                        </hr>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Edit veiculo-->
+        <div id="editVeiculo" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <nav class="navbar" style="padding: 13px;">
+                            <div id="main" class="container-fluid">
+                                <h3 class="page-header" style="color: darkslateblue;">Detalhes</h3>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Veículo</label>
+                                <input  id="info-veiculo" class="form-control widthInput" type="text">
+                            </div>
+                            <div class="alignComponents">
+                                <div class="form-group">
+                                    <label  for="">Marca</label>
+                                    <input id="info-marca" class="form-control widthInput" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label  for="">Ano</label>
+                                    <input id="info-ano" class="form-control widthInput" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  for="">Descrição</label>
+                                <textarea id="info-descricao" class="form-control" class="form-control" required></textarea>
+                             </div>
+                             <div id="divCheck">
+                                <img id="imgCheck" src="/images/check.png">
+                                <label id="statusVeiculo"></label>
+                            </div>
+                            </hr>
+                            <div class="modal-details">
+                                <label id="saveEditVeiculo" type="submit" class="btn btn-success buttonSave" value="SALVAR">SALVAR</label>
+                            </div>
+
+                        </nav>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
